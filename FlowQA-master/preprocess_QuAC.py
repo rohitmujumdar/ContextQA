@@ -169,6 +169,8 @@ meta = {
     'vocab': tr_vocab,
     'embedding': tr_embedding.tolist()
 }
+log.info('converted to meta, start writing')
+
 with open('QuAC_data/train_meta.msgpack', 'wb') as f:
     msgpack.dump(meta, f)
 
