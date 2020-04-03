@@ -68,7 +68,7 @@ log.addHandler(ch)
 
 def main():
     log.info('[program starts.]')
-    checkpoint = torch.load(args.model)
+    checkpoint = torch.load(args.model, map_location=torch.device('cpu'))
     opt = checkpoint['config']
     opt['task_name'] = 'QuAC'
     opt['cuda'] = args.cuda
