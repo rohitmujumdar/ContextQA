@@ -19,24 +19,26 @@ def process_json():
 
     dict_answers = []
 
-    for i,p in enumerate(predictions):
-        corresponding_val_section = val_data[i]['paragraphs'][0]
-        questions = corresponding_val_section['qas']
-        
-        qids = list(map(lambda q: q['id'], questions))
-        yesno = list(map(lambda q: q['yesno'], questions))
-        followup = list(map(lambda q: q['followup'], questions))
+    with open('pred_out/pred_eval_out.json','w') as fp:
+        for i,p in enumerate(predictions):
+            corresponding_val_section = val_data[i]['paragraphs'][0]
+            questions = corresponding_val_section['qas']
+            
+            qids = list(map(lambda q: q['id'], questions))
+            yesno = list(map(lambda q: q['yesno'], questions))
+            followup = list(map(lambda q: q['followup'], questions))
 
-        obj = {}
-        obj['best_span_str'] = p
-        obj["qid"] = qids
-        obj["yesno"] = yesno
-        obj["followup"] = followup
-        dict_answers.append(obj)
+            obj = {}
+            obj['best_span_str'] = p
+            obj["qid"] = qids
+            obj["yesno"] = yesno
+            obj["followup"] = followup
+            # dict_answers.append(obj)
+            json.dump(obj, fp)
+            fp.write("\n")
 
     
-    with open('pred_out/pred_eval_out.json','w') as fp:
-        json.dump(dict_answers, fp) 
+
 
 
 process_json()
