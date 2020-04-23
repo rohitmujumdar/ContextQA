@@ -1,10 +1,4 @@
-CS 7650 - Spring 2020 
+**CS 7650 - Spring 2020**
 NL Project : Team 5
 
-Instructions to run each model 
-
-1. FlowQA
-
-2. FlowQA + Attention
-
-3. ...
+Instructions to run each model : Please refer to the ReadME files inside each individual folder. 
