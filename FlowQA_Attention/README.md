@@ -23,11 +23,11 @@ Here we try to add the concept of attention to the historical flow of the conver
 	> cd FlowQA_Attention
 	
 2) To install requirements
-	> pip install -r requirements.txt
+	> pip install -r requirements.txt \
 	>./download.sh \
 	
 3) Preprocess data. This 
-	> python preprocess_QuAC.py \
+	> python preprocess_QuAC.py
 
 4) Train the model. This will save the best model in the *models* folder
 	> python FlowQA_Attention/code/train_QuAC.py
@@ -42,5 +42,5 @@ Here we try to add the concept of attention to the historical flow of the conver
 	> python convert_pred_to_scorer.py
 	
 8) Run the scorer to obtain results. "*model_output*" is the predictions output we had in the previous step. "*val_file*" is the dev dataset in *Quac_data* folder.  
-	> scorer.py --val_file QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
+	> scorer.py --val_file code/QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
 	
