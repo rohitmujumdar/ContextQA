@@ -13,7 +13,7 @@ Here we try to add the concept of attention to the historical flow of the conver
  2. Requirements : While the pip freeze of the requirements can be found in the requirments.txt, the following were the basic essential requirements.\
     a) allennlp==0.9.0\
     b) torch==1.4.0 \
-    c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|\
+    c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|
 
 How to run the code is the same as FlowQA. However, using "attention over flow" is set to be default.
 
@@ -21,7 +21,7 @@ From https://github.com/momohuang/FlowQA we borrow their instructions as follows
 
 **Steps to be performed**
 
-1) To install requirements\
+1) To install requirements
  > pip install -r requirements.txt
 
 
