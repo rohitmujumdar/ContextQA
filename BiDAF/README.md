@@ -1,14 +1,9 @@
-# Using enhanced BiDAF++ on QuAC
+# Enhancing BiDAF++
 
 ## Descriptions
 An original BiDAF++ model uses Char-CNN for character embedding and GLoVe for word embedding. It is also equipped with contextualized embeddings and self attention. In this model, marker embeddings corresponding to previous answer words are used, while question turn numbers are encoded into question embeddings.
 
-We've used [AllenNLP](https://github.com/allenai/allennlp) library to modify the BiDAF++ and used enhenced models to train on [QuAC](https://quac.ai/) dataset. 
-
-## Architecture of enhenced BiDAF++
-<p align="center">
-    <img src="Figures/Arch.png" width="90%"/>
-</p>
+We've used [AllenNLP](https://github.com/allenai/allennlp) library to modify the BiDAF++ and used enhanced models to train on [QuAC](https://quac.ai/) dataset. 
 
 ### Embedding layers from BiDAF++
 
