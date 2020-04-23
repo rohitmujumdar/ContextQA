@@ -24,7 +24,7 @@ Here we try to add the concept of attention to the historical flow of the conver
 	
 2) To install requirements
 	> pip install -r requirements.txt \
-	>./download.sh \
+	>./download.sh 
 	
 3) Preprocess data. This 
 	> python preprocess_QuAC.py
@@ -33,7 +33,7 @@ Here we try to add the concept of attention to the historical flow of the conver
 	> python FlowQA_Attention/code/train_QuAC.py
     
 5) Predict using this trained model. This will store the trained predictions file *pred_1.pckl* in *pred_out* folder. 
-	> python predict_QuAC_with_meta.py -m models\best_model.pt
+	> python predict_QuAC_with_meta.py -m models/best_model.pt
 
 6) Unpickle this file and convert JSON file using the following. This will create file *pred_1.json* in *pred_out* folder.
 	> python read_pred_pickle.py
