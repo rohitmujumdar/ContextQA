@@ -1,6 +1,6 @@
 # FlowQA_Attention 
 
-Here we try to add the concept of attention to the historical flow of the conversation so far. The intuiton behind this is that only some of thr previous question are contextually important when a new question has to be answered. 
+Here we try to add the concept of attention to the historical flow of the conversation so far. The intuiton behind this is that only some of the previous question are contextually important when a new question has to be answered. 
 
 **Experimental Setup**
 
