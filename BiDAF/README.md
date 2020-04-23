@@ -38,29 +38,19 @@ nohup allennlp train <your_path_to_jsonnet_file>  --serialization-dir <your_path
 ```
 As [QuAC](https://arxiv.org/pdf/1808.07036.pdf) mentioned，Questions in the training set have one reference answer, while validation and test questions have five references each, which makes the F1 score on validation dataset has a higher score then that on training set.
 
-Best model's configuration is [here](https://github.com/deepnlp-cs599-usc/quac/blob/master/BiDAF/BiDAFF%2B%2B_with_glove%2Bbert.jsonnet).
-## Results
-### F1 score
-Enhanced model by BERT
-<p align="center">
-    <img src="Figures/enhenced.png" width="200%"/>
-</p>
-Enhanced model by ELMo 
-<p align="center">
-    <img src="Figures/enhenced_elmo.png" width="200%"/>
-</p>
-Baseline model
-<p align="center">
-    <img src="Figures/baseline.png" width="200%"/>
-</p>
+Best model's configuration is [here](https://github.gatech.edu/schaudhuri34/ContextQA/blob/master/BiDAF/config.jsonnet).
 
-### Performance on baseline and enhanced models
+### Testing
+To run prediction, firstly, you will need the model and test data. Our pre-trained model can be downloaded from here -  <link>
+```bash
+allennlp predict model.tar.gz <your_input_file> --output-file <your_output_file>
+```
 
-| | F1 score on training set | F1 score on validation set|
-| --- | --- | --- |
-| Baseline model | 49.40 | 55.59 |
-| Enhanced by BERT | **53.05** | **63.85**|
+To evaluate the model on your test predictions, run the following command. The scorer script can be downloaded from here - https://s3.amazonaws.com/my89public/quac/scorer.py
 
+```bash
+python scorer.py --val_file <path_to_val> --model_output <path_to_predictions> --o eval.json
+```
 ## Related works
 
 * [Bidirectional attention ﬂow for machine comprehension](https://arxiv.org/abs/1611.01603) by Minjoon Seo et. al.
