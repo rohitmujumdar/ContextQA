@@ -4,16 +4,16 @@ Here we try to add the concept of attention to the historical flow of the conver
 
 **Experimental Setup**
 
-1. The model was trained on Google Cloud. The computing engine had the following configurations tuned
-   (a) Machine type : n1-highmem-8 (8 vCPUs, 52 GB memory)
-   (b) GPUs : 1 x NVIDIA Tesla V100
-   (c) Zone : us-west1-a
-   (d) Boot Disk : ubuntu-1604-xenial-v20200407,SSD persistent disk, Google managed, Boot, read/write
+1. The model was trained on Google Cloud. The computing engine had the following configurations tuned\
+   (a) Machine type : n1-highmem-8 (8 vCPUs, 52 GB memory)\
+   (b) GPUs : 1 x NVIDIA Tesla V100\
+   (c) Zone : us-west1-a\
+   (d) Boot Disk : ubuntu-1604-xenial-v20200407,SSD persistent disk, Google managed, Boot, read/write\
 	
- 2. Requirements : While the pip freeze of the requirements can be found in the requirments.txt, the following were the basic essential requirements.
-    a) allennlp==0.9.0
-    b) torch==1.4.0 
-    c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|
+ 2. Requirements : While the pip freeze of the requirements can be found in the requirments.txt, the following were the basic essential requirements.\
+    a) allennlp==0.9.0\
+    b) torch==1.4.0 \
+    c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|\
 
 How to run the code is the same as FlowQA. However, using "attention over flow" is set to be default.
 
@@ -21,7 +21,7 @@ From https://github.com/momohuang/FlowQA we borrow their instructions as follows
 
 **Steps to be performed**
 
-1) To install requirements 
+1) To install requirements\
  > pip install -r requirements.txt
 
 
