@@ -14,51 +14,33 @@ Here we try to add the concept of attention to the historical flow of the conver
     a) allennlp==0.9.0\
     b) torch==1.4.0 \
     c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|
+    d) msgpack-python==0.5.6
 
-How to run the code is the same as FlowQA. However, using "attention over flow" is set to be default.
-
-From https://github.com/momohuang/FlowQA we borrow their instructions as follows
 
 **Steps to be performed**
 
-1) To install requirements
- > pip install -r requirements.txt
+1) Make sure you are in the correct directory
+	> cd FlowQA_Attention
+	
+2) To install requirements
+	> pip install -r requirements.txt
+	>./download.sh \
+	
+3) Preprocess data. This 
+	> python preprocess_QuAC.py \
 
+4) Train the model. This will save the best model in the *models* folder
+	> python FlowQA_Attention/code/train_QuAC.py
+    
+5) Predict using this trained model. This will store the trained predictions file *pred_1.pckl* in *pred_out* folder. 
+	> python predict_QuAC_with_meta.py -m models\best_model.pt
 
-> ./download.sh
-
-Step 3:
-preprocess the data files using:
-
-> python preprocess_QuAC.py
-
-Step 4:
-run the training code using:
-
-> python train_QuAC.py
-
-To specify not using "attention over flow", run:
-
-> python train_QuAC.py --flow_attention=0
-
-
-## Results
-
-The result shows that our attempt slightly improves FlowQA by 0.1 of F-1 value on dev set. We would like to mention that the model converges much faster, as only 10 epochs is used instead of 20.
-
-![image](https://github.com/deepnlp-cs599-usc/quac/blob/master/FlowQA_Attention/figure/result.png)
-
-
-## References
-
-[Flowqa: Grasping flow in history for conversational machine comprehensionn.](https://arxiv.org/abs/1810.06683) By Huang H Y, Choi E, Yih W.
-
-[Quac: Question answering in context.](https://arxiv.org/abs/1808.07036) By Choi E, He H, Iyyer M, et al. 
-
-
-
-
-
-
-
-
+6) Unpickle this file and convert JSON file using the following. This will create file *pred_1.json* in *pred_out* folder.
+	> python read_pred_pickle.py
+	
+7) The QUAC scorer can be downloaded from the QUAC website. It requires the predictions JSON to be in a certain format. The following script will take care of that and create *pred_eval_out.json* in *pred_out*
+	> python convert_pred_to_scorer.py
+	
+8) Run the scorer to obtain results. "*model_output*" is the predictions output we had in the previous step. "*val_file*" is the dev dataset in *Quac_data* folder.  
+	> scorer.py --val_file QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
+	
