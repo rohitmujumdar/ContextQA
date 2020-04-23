@@ -1,31 +1,29 @@
-# FlowQA + Attention Over Flow
+# FlowQA_Attention 
 
+Here we try to add the concept of attention to the historical flow of the conversation so far. The intuiton behind this is that only some of thr previous question are contextually important when a new question has to be answered. 
 
+**Experimental Setup**
 
-## How we improve FlowQA -- Adding Self-attention
-
-We have noticed that in the "flow" operation, no attention mechanism is used. We believe that applying attention here should be considered, because not every historical conversation is important. When new questions are posted, it is highly likely that only several previous questions are involved, instead of all. By adding attention in the "flow" operation, we could align new representations with previous useful ones. We would like to call it "attention-over-flow".
-
-![image](https://github.com/deepnlp-cs599-usc/quac/blob/master/FlowQA_Attention/figure/Attention%20Over%20Flow.png)
-
-
-## Experiments
-
-We conducted experiments on Google Cloud, using a 2-CPU, 1 Tesla K80 GPU with 11 GB GPU memory and 60 GB disk memory. We use python 3.6.8 and pytorch 1.0.1. The batch size is set to be 2. The code is based on [momohuang's code on github](https://github.com/momohuang/FlowQA).
+1. The model was trained on Google Cloud. The computing engine had the following configurations tuned
+   (a) Machine type : n1-highmem-8 (8 vCPUs, 52 GB memory)
+   (b) GPUs : 1 x NVIDIA Tesla V100
+   (c) Zone : us-west1-a 
+   (d) Boot Disk : ubuntu-1604-xenial-v20200407,SSD persistent disk, Google managed, Boot, read/write
+	
+ 2. Requirements : While the pip freeze of the requirements can be found in the requirments.txt, the following were the basic essential requirements. 
+    a) allennlp==0.9.0
+    b) torch==1.4.0
+    c) Python 3.5.1 |Anaconda 4.0.0 (64-bit)|
 
 How to run the code is the same as FlowQA. However, using "attention over flow" is set to be default.
 
 From https://github.com/momohuang/FlowQA we borrow their instructions as follows
 
-Step 1:
-perform the following:
+**Steps to be performed**
 
-> pip install -r requirements.txt
+1) To install requirements 
+ > pip install -r requirements.txt
 
-to install all dependent python packages.
-
-Step 2:
-download necessary files using:
 
 > ./download.sh
 
