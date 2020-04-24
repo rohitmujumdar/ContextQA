@@ -40,6 +40,11 @@ def process_json():
             json.dump(obj, fp)
             fp.write("\n")
 
+
+
+process_json()
+
+
     
 
 """"""
@@ -59,5 +64,3 @@ def process_json():
 
 
 """"""
-
-process_json()
