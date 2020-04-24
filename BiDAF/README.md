@@ -41,7 +41,7 @@ As [QuAC](https://arxiv.org/pdf/1808.07036.pdf) mentioned，Questions in the tra
 Best model's configuration is [here](https://github.gatech.edu/schaudhuri34/ContextQA/blob/master/BiDAF/config.jsonnet).
 
 ### Testing
-To run prediction, firstly, you will need the model and test data. Our pre-trained model can be downloaded from here -  <link>
+To run prediction, firstly, you will need the model and test data. Our pre-trained model can be downloaded from here -  https://drive.google.com/file/d/1OBcop4LdjXkuE6pmoXht5a49EBm5FFZE/view?usp=sharing 
 ```bash
 allennlp predict model.tar.gz <your_input_file> --output-file <your_output_file>
 ```
