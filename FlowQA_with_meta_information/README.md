@@ -56,6 +56,10 @@ python predict_QuAC_with_meta.py -m ./models_baseline_flow/best_model.pt
 ```
 
 5. Convert the pckl file to json
+```
+python convert_pred_to_json.py 
+python convert_to_scorer_with_meta.py
+```
 
 6. Use json to run the scorer
 
