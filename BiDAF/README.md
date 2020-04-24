@@ -51,6 +51,20 @@ To evaluate the model on your test predictions, run the following command. The s
 ```bash
 python scorer.py --val_file <path_to_val> --model_output <path_to_predictions> --o eval.json
 ```
+
+## Results
+
+| Metric                         | BiDAF++ with BERT |
+|--------------------------------|-------------------|
+| Overall F1                     | 63.9              |
+| Unfiltered F1                  | 61.1              |
+| Yes/No Accuracy                | 86.9              |
+| Followup Accuracy              | 62.5              |
+| Accuracy On "Cannot   answer"  | 62.1              |
+| Human F1                       | 80.8              |
+| HEQ-Q                          | 59.5              |
+| HEQ-D                          | 6.5              |
+
 ## Related works
 
 * [Bidirectional attention ﬂow for machine comprehension](https://arxiv.org/abs/1611.01603) by Minjoon Seo et. al.
