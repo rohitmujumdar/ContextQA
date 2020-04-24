@@ -11,7 +11,7 @@ We have implemented three different models for the task:
 2. FlowQA enhanced with prediction of meta information about the question
 3. FlowQA enhanced with attention
 
-Instructions to run each model : Please refer to the ReadME files inside each individual folder. 
+Instructions to run each model : Please refer to the READMEs inside each individual folder. 
 
 ### Project Video ### 
 
