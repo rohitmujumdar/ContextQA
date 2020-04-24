@@ -46,3 +46,17 @@ Here we try to add the concept of attention to the historical flow of the conver
 	
 9) To analyse any particular instance of the results run the following. 
 	> python examine_prediction_instance instance_number
+	
+
+**Results**
+
+| Metric                         | FlowQA with attention |
+|--------------------------------|-----------------------|
+| Overall F1                     | 59.1                  |
+| Unfiltered F1                  | 57.9                  |
+| Yes/No Accuracy                | -                     |
+| Followup Accuracy              | -                     |
+| Accuracy On "Cannot   answer"  | 20.7                  |
+| Human F1                       | 80.8                  |
+| HEQ-Q                          | 54.4                  |
+| HEQ-D                          | 3.8                   |
