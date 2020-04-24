@@ -42,5 +42,7 @@ Here we try to add the concept of attention to the historical flow of the conver
 	> python convert_pred_to_scorer.py
 	
 8) Run the scorer to obtain results. "*model_output*" is the predictions output we had in the previous step. "*val_file*" is the dev dataset in *Quac_data* folder.  
-	> scorer.py --val_file code/QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
+	> python scorer.py --val_file code/QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
 	
+9) To analyse any particular instance of the results run the following. 
+	> python examine_prediction_instance instance_number
