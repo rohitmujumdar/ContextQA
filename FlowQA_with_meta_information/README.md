@@ -21,7 +21,7 @@ The meta information that the network now predicts is based on the QuAC dataset 
     a) allennlp \
     b) torch \
     c) pandas \
-    d) msgpack \
+    d) msgpack 
     
  
 
@@ -31,19 +31,19 @@ The meta information that the network now predicts is based on the QuAC dataset 
 
 cd FlowQA_with_meta_code \
 pip install -r requirements.txt \
-./download.sh \
+./download.sh 
 
 2. Preprocess the data (The preprocessing differs as we now need to store and convert the meta information about the QA pair)
 
-python preprocess_QuAC_with_meta.py \
+python preprocess_QuAC_with_meta.py 
 
 3. Train the model
 
-python train_QuAC_with_meta.py --name baseline_flow --epochs 20 \
+python train_QuAC_with_meta.py --name baseline_flow --epochs 20 
 
 4. Predict using the trained model
 
-python predict_QuAC_with_meta.py -m ./models_baseline_flow/best_model.pt \
+python predict_QuAC_with_meta.py -m ./models_baseline_flow/best_model.pt 
 
 5. Convert the pckl file to json
 
@@ -52,7 +52,7 @@ python predict_QuAC_with_meta.py -m ./models_baseline_flow/best_model.pt \
 python convert_to_scorer_with_meta.py \
 scorer.py --val_file ../QuAC_data/dev.json --model_output pred_out/pred_eval_out.json --o eval.json
 
-** Results **
+**Results**
 
 | Metric                         | FlowQA with meta | 
 |--------------------------------|------------------|
