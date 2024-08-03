@@ -1,5 +1,5 @@
 # CS 7650 - Spring 2020 #
-## NL Project : Team 5 ##
+## NL Project : Team 5 : Rohit Mujumdar, Sushmita Singh, Shalini Chaudhuri##
 
 Information-seeking QA dialogue systems are an important application for natural language query systems[[1]], when users have limited or no access to an underlying corpus [[2]]. In such systems, there is a Questioning-agent (Q-bot) that has access to the corpus that contains relevant and important information, and an Answering-agent (A-bot) which seeks to know more about a particular topic or entity. Unlike regular QA systems, contextual dialogue QA pairs are often meaningful only within the context of the dialog with questions often being abstract, open-ended or unanswerable. In our project, we aim to build an A-bot capable of participating in a human-like, information-seeking conversation[[3]] about a particular subject. The goal of this project is to develop an A-bot that can provide answers and give information to an agent that has no prior knowledge of a subject.
 
